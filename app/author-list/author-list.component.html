@@ -1,0 +1,122 @@
+<link
+
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+/><div class="container" style="text-align: center;">
+  <h2>Author List</h2>
+  <!-- <div class="card bg-glass"style="background-color:rgba(159, 180, 235, 0.9)">
+    <div class="card-body px-4 py-5 px-md-5">
+<div class="contact_us_2"> -->
+<div class="container">
+  <section class="background-radial-gradient overflow-hidden">
+  <style>
+    .background-radial-gradient {
+      background-color: rgba(48, 51, 61, 0.9);
+    }
+  
+    #radius-shape-1 {
+      height: 220px;
+      width: 220px;
+      top: -60px;
+      left: -130px;
+      background-color: rgba(15, 23, 43, .9);
+      overflow: hidden;
+    }
+  
+    #radius-shape-2 {
+      border-radius: 38% 62% 63% 37% / 70% 33% 67% 30%;
+      bottom: -60px;
+      right: -110px;
+      width: 300px;
+      height: 300px;
+      background: radial-gradient(#44006b, #ad1fff);
+      overflow: hidden;
+    }
+  
+    .bg-glass {
+      background-color: hsla(0, 0%, 100%, 0.9) !important;
+      backdrop-filter: saturate(200%) blur(25px);
+    }
+  </style>
+
+
+
+
+
+
+
+
+        <div class="container" style="margin: 10px;">
+        <div class="input-group mb-3">
+          <li class="nav-item dropdown" style="list-style: none;margin:5px"></li>
+          
+
+
+    
+
+    
+   
+
+    
+
+
+
+
+
+
+    
+       
+<table class = "table table-striped"
+aria-setsize="30px">
+
+  
+  <style>
+    tr:hover {background-color:rgb(103, 103, 126)}
+    table, th, td {
+  border: 1px solid rgba(68, 59, 67, 0.603);
+  border-collapse: collapse;
+  font-size:large;
+}
+    
+  </style>
+  <br>
+    <thead style="background-color: rgb(102, 139, 199);">
+        <tr>
+            <th>Author Name</th>
+            <th>Author Email </th>
+            <th> Author Country</th>
+        
+            
+            
+            <th> Actions </th>
+        </tr>
+     
+    </thead>
+    <tbody style="background-color: #EEE2DC;">
+     
+        <tr *ngFor = "let author of authors paginate: { itemsPerPage: count, currentPage: pageNo }">
+
+        
+       
+            <td> {{ author.authorName }} </td>
+            <td>{{author.authorEmail }}</td>
+            <td> {{author.authorCountry }} </td>
+            
+            <td>
+              <button (click) = "updateAuthor(author.id)" class = "btn btn-info"><i class="fa fa-refresh fa-spin" style="font: size 15px ;"></i></button>
+              <button (click) = "deleteAuthor(author.id)" class = "btn btn-danger" style="margin-left: 10px"><i class="fa fa-trash-o" style="font:size 15px"></i> </button>
+              <button (click) = "authorDetails(author.id)" class = "btn btn-info" style="margin-left: 10px"><i class="fa fa-eye" style="font-size:15px"></i></button>
+              <button (click)="viewBook(author.id)"  type="button" class="btn btn-outline-info " style="padding: 5px;margin-left:25px;border-radius: 5px;font-weight:600;color:#131212;background: rgb(224, 232, 245);" data-bs-toggle="dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                View Books</button>
+              </td>
+        </tr>
+      
+        <tr *ngIf="authors !== null">
+          <button (click)="removeAllAuthors()" class="m-3 btn btn-sm btn-danger" >
+              Remove All
+            </button>
+      </tr>
+    </tbody>
+</table>
+<div><pagination-controls (pageChange)="pageNo = $event" ></pagination-controls> </div>
+

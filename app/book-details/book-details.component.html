@@ -1,0 +1,55 @@
+<div class="container" style="text-align: center;">
+<h3> View Library  Details</h3>
+</div>
+
+<style>
+    
+    tr:hover {background-color:rgb(239, 239, 245)}
+    table, th, td {
+  border: 1px solid rgba(216, 141, 210, 0.603);
+  border-collapse: collapse;
+  font-size:large;
+}
+    table, th, td {
+      border: 1px solid black;
+      border-collapse: collapse;
+      margin-left: auto;
+    }
+    th, td {
+      padding: 2px;
+      text-align:left;
+    }
+    </style>
+    <button class = "btn btn-success" type ="Book Now" style='margin-right:16px'><i style="font: size 15px ; "></i>Buy Now</button>
+    <button (click) = "addBooking(bookId)" class = "btn btn-success" type ="Lend Now" style='margin-right:16px'><i style="font: size 15px ;"></i>Lend Now</button>
+ 
+
+    <body>
+        <div style="background-color: rgb(175, 175, 241);">
+        <table style="width:100%">
+            <tr>
+              <th>Book Name: </th>
+              <td>{{book.bookName}}</td>
+            </tr>
+            <tr>
+              <th>Author Name:</th>
+              <td>{{book.authorName}}</td>
+            </tr>
+            <tr>
+              <th>Price :</th>
+              <td>{{book.price}}</td>
+            </tr>
+            <tr>
+                <th>Number Of Copies: </th>
+                <td>{{book.noCopies}}</td>
+              </tr>
+              <tr>
+              <th> Published:  </th>
+                <td>{{book.isPublished}}</td>
+              </tr>
+          </table>
+        </div>
+    </body>       
+
+    
+    

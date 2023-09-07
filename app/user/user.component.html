@@ -1,0 +1,49 @@
+<style>
+    
+      .background-radial-gradient {
+        background-color: rgba(139, 140, 145, 0.9);
+      }
+    
+      #radius-shape-1 {
+        height: 220px;
+        width: 220px;
+        top: -60px;
+        left: -130px;
+        background-color: rgba(36, 42, 56, 0.9);
+        overflow: hidden;
+      }
+    
+      #radius-shape-2 {
+        border-radius: 38% 62% 63% 37% / 70% 33% 67% 30%;
+        bottom: -60px;
+        right: -110px;
+        width: 300px;
+        height: 300px;
+        background: radial-gradient(#9d7ab1, #ad1fff);
+        overflow: hidden;
+      }
+    
+      .bg-glass {
+        background-color: hsla(0, 0%, 100%, 0.9) !important;
+        backdrop-filter: saturate(200%) blur(25px);
+      }
+tr:hover {background-color:rgb(164, 164, 226)}
+</style>
+
+<div class="container" style="margin:20px">
+    <h1 style="color: azure"> User list</h1>
+    <table class = "table table-dark table-striped" style="color: azure;">
+    <tr>
+        <th>User Id</th>
+        <th>User Name</th>
+        <th>date</th>
+        <th>User Email</th>
+    </tr>
+    <tr *ngFor="let data_user of user">
+        <td>{{data_user.userID}}</td>
+        <td>{{data_user.userName}}</td>
+        <td>{{data_user.date}}</td>
+        <td>{{data_user.userEmail}}</td>
+    </tr>
+    </table>
+</div>

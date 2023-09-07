@@ -1,0 +1,117 @@
+<div class="container">
+  <section class="background-radial-gradient overflow-hidden">
+  <style>
+    /* .background-radial-gradient {
+      background-color: rgba(114, 116, 119, 0.9);
+    } */
+  
+    #radius-shape-1 {
+      height: 220px;
+      width: 220px;
+      top: -60px;
+      left: -130px;
+      background-color: rgba(131, 140, 165, 0.9);
+      overflow: hidden;
+    }
+  
+    #radius-shape-2 {
+      border-radius: 38% 62% 63% 37% / 70% 33% 67% 30%;
+      bottom: -60px;
+      right: -110px;
+      width: 300px;
+      height: 300px;
+      background: radial-gradient(#dbb8f0, #d6c1e2);
+      overflow: hidden;
+    }
+  
+    .bg-glass {
+      background-color: hsla(226, 14%, 48%, 0.9) !important;
+      backdrop-filter: saturate(200%) blur(25px);
+    }
+  </style>
+
+
+<div class="col-md-6 offset-md-3" style="width: 800px;margin: 900pz;">
+<div class="container" style="text-align: center;">
+  
+              
+<h2>signup</h2>
+</div>
+
+
+<div class="card bg-glass">
+  <div class="card-body px-4 py-5 px-md-5">
+    
+    <div class ="background-radial-gradient" style="margin-left:0dvb">
+     
+    
+
+      
+<label class="control-label"  for="username"style="">Admin Name</label>
+          <div class="controls">
+            <input type="text" id="username" name="username" placeholder="Enter your username" class="input-xlarge" #userName>
+           
+          </div>
+        
+     
+        <div class="control-group">
+           Username
+         <label class="control-label"  for="username">Date of Birth</label>
+          <div class="controls">
+            <input type="date" id="dob" name="dob" placeholder="" class="input-xlarge" #dob>
+           
+          </div>
+        </div>
+
+
+
+        <div class="control-group">
+             E-mail 
+            <label class="control-label" for="email">E-mail</label>
+            <div class="controls">
+              <input type="email" id="email" name="email" placeholder="Enter your email" class="input-xlarge" #email>
+              
+            </div>
+          </div>
+
+          <div class="control-group">
+             Password
+            <label class="control-label" for="password">Password</label>
+            <div class="controls">
+              <input type="password" id="password" name="password" placeholder="Set Password" class="input-xlarge" #password>
+             
+            </div>
+          </div>
+
+          <div class="control-group">
+             Password 
+             <label class="control-label"  for="password_confirm">Password (Confirm)</label>
+            <div class="controls">
+              <input type="password" id="password_confirm" name="password_confirm" placeholder="Retype Password" class="input-xlarge" #repassword>
+              
+            </div>
+          </div>
+    
+
+         <fieldset>
+          <div class="control-group">
+             Username 
+             <label class="control-label"  for="username">Bio</label>
+            <div class="controls">
+              <textarea rows="6" cols="40" type="text" id="about" name="about" placeholder="Enter your bio" class="input-xlarge" #about></textarea>
+              
+            </div>
+          </div>
+
+
+
+          <div class="control-group"> 
+             Button
+             <div class="controls">
+              <button class="btn btn-primary" type="submit" (click)="saveUser(userName.value, dob.value, email.value, password.value, repassword.value, about.value)">Sign up</button>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+     
+      

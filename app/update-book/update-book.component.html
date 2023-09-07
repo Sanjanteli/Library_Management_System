@@ -1,0 +1,79 @@
+<br>
+<div class="card bg-glass"style="background-color:rgba(159, 180, 235, 0.9)">
+    <div class="card-body px-4 py-5 px-md-5">
+<div class="contact_us_2">
+<div class="container">
+  <section class="background-radial-gradient overflow-hidden">
+  <style>
+    .background-radial-gradient {
+      background-color: rgba(186, 194, 221, 0.9);
+    }
+  
+    #radius-shape-1 {
+      height: 220px;
+      width: 220px;
+      top: -60px;
+      left: -130px;
+      background-color: rgba(15, 23, 43, .9);
+      overflow: hidden;
+    }
+  
+    #radius-shape-2 {
+      border-radius: 38% 62% 63% 37% / 70% 33% 67% 30%;
+      bottom: -60px;
+      right: -110px;
+      width: 300px;
+      height: 300px;
+      background: radial-gradient(#44006b, #ad1fff);
+      overflow: hidden;
+    }
+  
+    .bg-glass {
+      background-color: hsla(0, 0%, 100%, 0.9) !important;
+      backdrop-filter: saturate(200%) blur(25px);
+    }
+  </style>
+
+<div class="col-md-6 offset-md-3">
+    
+    <h3> Update Library </h3>
+   
+    <form (ngSubmit) = "onSubmit()">
+    
+        <div class="form-group">
+            <label> Book Name</label>
+            <input type="text" class ="form-control" id = "bookName"
+                [(ngModel)] = "book.bookName" name = "bookName">
+        </div>
+        
+        <div class="form-group">
+            <label> Author Name</label>
+            <input type="text" class ="form-control" id = "authorName"
+                [(ngModel)] = "book.authorName" name = "authorName">
+        </div>
+        <div class="form-group">
+            <label> Price </label>
+            <input type="text" class ="form-control" id = "price"
+                [(ngModel)] = "book.price" name = "price">
+        </div>
+
+    
+        <div class="form-group">
+            <label> Number Of Copies </label>
+            <input type="text" class ="form-control" id = "noCopies"
+                [(ngModel)] = "book.noCopies" name = "noCopies">
+        </div>
+        
+    
+        
+        <div class="form-group">
+            <label> Published </label>
+            <input type="text" class ="form-control" id = "isPublished"
+                [(ngModel)] = "book.isPublished" name = "isPublished">
+        </div>
+    
+        <button class = "btn btn-success" type ="submit">Submit</button>
+    
+    </form>
+
+</div>
